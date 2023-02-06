@@ -11,6 +11,7 @@ import WebKit
 class AboutViewController: UIViewController {
 	@IBOutlet var webView: WKWebView!
 	
+	// Runs when about screen is loaded.
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		if let url = Bundle.main.url(
@@ -20,25 +21,8 @@ class AboutViewController: UIViewController {
 		}
 	}
 	
+	// Closes.
 	@IBAction func close() {
 		dismiss(animated: true, completion: nil)
 	}
 }
-		
-		
-
-        // Do any additional setup after loading the view.
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-

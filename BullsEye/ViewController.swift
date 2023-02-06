@@ -19,12 +19,14 @@ class ViewController: UIViewController {
 	@IBOutlet var scoreLabel: UILabel!
 	@IBOutlet var roundLabel: UILabel!
 	
+	// Updates labels.
 	func updateLabels() {
 		targetLabel.text = String(targetValue)
 		scoreLabel.text = String(score)
 		roundLabel.text = String(round)
    }
 
+	// Starts new round.
 	func startNewRound() {
 		round += 1
 		targetValue = Int.random(in: 1...100)
@@ -33,7 +35,7 @@ class ViewController: UIViewController {
 		updateLabels()
 	}
 	
-	// 
+	// Starts new game.
 	@IBAction func startNewGame() {
 		score = 0
 		round = 0
@@ -46,6 +48,7 @@ class ViewController: UIViewController {
 		 view.layer.add(transition, forKey: nil)
 	}
 	
+	// Runs when game loads.
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		startNewGame()
